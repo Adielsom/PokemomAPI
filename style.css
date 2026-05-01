@@ -1,0 +1,129 @@
+:root {
+    --primary: #ef5350;
+    --bg: #eef2f3;
+    --text: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.search-box {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    padding: 12px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+.card {
+    min-height: 200px;
+    border-radius: 15px;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.img-container img {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

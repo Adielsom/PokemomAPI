@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemom - ADS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Explora Pokemom</h1>
+
+        <div class="search-box">
+            <input type="text" id="pokemonInput" placeholder="Ex: Charizard, pikachu..."
+                onkeypress="if(event.key === 'Enter') buscarDados()">
+            <button onclick="buscarDados()">Buscar</button>
+        </div>
+
+        <div id="resultado" class="card">
+            <p id="msg-erro" class="error"></p>
+            <div id="loading" class="hidden">Buscando na pokeapi...</div>
+
+            <div id="card-conteudo" class="hidden">
+                <h2 id="nome"></h2>
+                <div class="img-container">
+                    <img id="imagem" src="" alt="Imagem do Pokémon">
+                </div>
+                <div class="info-grid">
+                    <p><strong>ID:</strong> #<span id="pokedex-id"></span></p>
+                    <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+                    <p><strong>Peso:</strong> <span id="peso"></span></p>
+                    <p><strong>Altura:</strong> <span id="altura"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
